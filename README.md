@@ -59,7 +59,7 @@ including their unique IDs, names, and associated permissions.
 **Headers**:
   - `Authorization`: Bearer token for authenticating the request.
     Format: `Bearer [your_token]`
-  - `X-API-Token`: Specific API token for additional security.
+  - `x-api-token`: Specific API token for additional security.
 
 Response
 --------
@@ -111,7 +111,7 @@ This endpoint retrieves a list of all permissions, including their IDs, names, e
 **Headers**:
   - `Authorization`: Bearer token for authenticating the request.
     Format: `Bearer [your_token]`
-  - `X-API-Token`: Specific API token for additional security.
+  - `x-api-token`: Specific API token for additional security.
 
 ### Response
 ------------
@@ -173,13 +173,14 @@ This endpoint replaces all existing permissions of a specified role with the new
 **Headers**:
   - `Authorization`: Bearer token for authenticating the request.
     Format: `Bearer [your_token]`
-  - `X-API-Token`: Specific API token for additional security.
+  - `x-api-key`: Specific API token for additional security.
 
 **Body**: 
 A JSON object containing the `roleId` and a new array of permissions. This operation will replace all existing permissions of the role with those specified in the array.
 
 **Example Request Body**:
  ```
+
 {
     "roleId": "6f25f789-72f3-41e2-9561-b30ca19aa225",
     "permissions": [
@@ -209,6 +210,7 @@ A JSON object containing the `roleId` and a new array of permissions. This opera
         }
     ]
 }
+
 ```
 
 Response
@@ -220,12 +222,14 @@ Body: Updated role object with new permissions.
 Example Response:
 -----------------
 ```
+
 {
     "roleId": "6f25f789-72f3-41e2-9561-b30ca19aa225",
     "permissions": [
         ... (updated permissions)
     ]
 }
+
 ```
 
 Error Response
@@ -240,17 +244,21 @@ Example Error Responses:
 ------------------------
 Role Not Found:
 ```
+
 {
     "error": "Role not found",
     "code": "ROLE_NOT_FOUND"
 }
+
 ```
 Invalid Permission IDs:
 
-```{
+```
+{
     "error": "Invalid permission IDs: [list of invalid IDs]",
     "code": "INVALID_PERMISSION"
 }
+
 ```
 
 
