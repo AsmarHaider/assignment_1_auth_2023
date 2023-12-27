@@ -1,6 +1,6 @@
 # Project Overview
 
-This project is a demonstration of my skills in TypeScript, SQLite, and PostgreSQL, highlighting my ability to integrate these technologies in a cohesive web application.
+This project is a demonstration of my skills in TypeScript, SQLite (in memory via Type ORM), and PostgreSQL, highlighting my ability to integrate these technologies in a cohesive web application.
 
 ## Important Note on `.env` File
 For ease of setup, a `.env` file is included in the documentation. However, I know that including `.env` files in repositories is generally not recommended for security reasons. To mitigate this, the `.env` file is also added to `.gitignore`.
@@ -69,7 +69,7 @@ Body: Array of roles (ID, name, permissions).
 
 Example Response:
 -----------------
-{
+```{
     "id": "9faaf9ba-464e-4c68-a901-630fc4de123b",
     "name": "User",
     "permissions": []
@@ -79,8 +79,7 @@ Example Response:
     "name": "Administrator",
     "permissions": []
 },
-...
-
+```
 Error Response
 --------------
 Status Code: Depends on error (400, 401, 403, 500, etc.).
@@ -89,10 +88,11 @@ Body: JSON object with 'error' message and 'code'.
 
 Example Error Response:
 -----------------------
-{
+```{
     "error": "Error message here",
     "code": "Error code here"
 }
+```
 
 ## GET /auth/permissions - Fetch All Permissions
 ===============================================
@@ -126,7 +126,7 @@ This endpoint retrieves a list of all permissions, including their IDs, names, e
 
 ### Example Response
 -------------------
-[
+```[
     {
         "id": "0d6179fc-bc2f-4a50-bfd8-4ce4d10680f4",
         "name": "Permission 1",
@@ -136,6 +136,7 @@ This endpoint retrieves a list of all permissions, including their IDs, names, e
         "description": "Allows reading from Database1"
     },
 ]
+```
 
 Error Response
 --------------
@@ -145,10 +146,12 @@ Body: JSON object with 'error' message and 'code'.
 
 Example Error Response:
 -----------------------
-{
+```{
     "error": "Error message here",
     "code": "Error code here"
 }
+
+```
 
 
 ## PUT /auth/roles - Replace Role Permissions
@@ -172,7 +175,7 @@ This endpoint replaces all existing permissions of a specified role with the new
 A JSON object containing the `roleId` and a new array of permissions. This operation will replace all existing permissions of the role with those specified in the array.
 
 **Example Request Body**:
-{
+ ```{
     "roleId": "6f25f789-72f3-41e2-9561-b30ca19aa225",
     "permissions": [
         {
@@ -201,6 +204,7 @@ A JSON object containing the `roleId` and a new array of permissions. This opera
         }
     ]
 }
+```
 
 Response
 --------
@@ -210,12 +214,13 @@ Body: Updated role object with new permissions.
 
 Example Response:
 -----------------
-{
+```{
     "roleId": "6f25f789-72f3-41e2-9561-b30ca19aa225",
     "permissions": [
         ... (updated permissions)
     ]
 }
+```
 
 Error Response
 --------------
@@ -228,16 +233,18 @@ Body: JSON object with 'error' message and 'code'.
 Example Error Responses:
 ------------------------
 Role Not Found:
-{
+```{
     "error": "Role not found",
     "code": "ROLE_NOT_FOUND"
 }
-
+```
 Invalid Permission IDs:
-{
+
+```{
     "error": "Invalid permission IDs: [list of invalid IDs]",
     "code": "INVALID_PERMISSION"
 }
+```
 
 
 
