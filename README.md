@@ -1,8 +1,8 @@
-Project Overview
+# Project Overview
 
 This project is a demonstration of my skills in TypeScript, SQLlite, and PostgreSQL.
 
-Important Note on .env File
+## Important Note on .env File
 For your convenience, I have included a .env file in the documentation. However, I understand that including .env files in a repository is not recommended due to security reasons. To address this, the .env file is also added to .gitignore.
 
 .env File Documentation
