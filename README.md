@@ -33,12 +33,12 @@ The `.env` file is structured as follows, and you may copy it or set the environ
   **Description**: Name of the PostgreSQL database to which the application will connect.
 
 ## Running the Project
-To run the project, configure the `.env` file with the appropriate settings:
+To run the project, configure the `.env` file or env variables with the appropriate settings :
 
 - **SQLite (In-memory)**: Use `DATABASE_TYPE=sqlite_mem` for SQLite in-memory database operations.
 - **PostgreSQL**: If using PostgreSQL (`DATABASE_TYPE=postgres`), additional parameters like `PG_DB_HOST`, `PG_DB_PORT`, `PG_DB_USER_NAME`, `PG_DB_PASSWORD`, and `PG_DB_NAME` must be correctly set.
 
-Ensure these settings are correctly configured in the `.env` file before running the project.
+Ensure these settings are correctly configured in the `.env` file or env variables before running the project.
 
 
 # API Documentation
