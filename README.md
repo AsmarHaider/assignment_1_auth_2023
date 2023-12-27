@@ -1,6 +1,6 @@
 # Project Overview
 
-This project is a demonstration of my skills in TypeScript, SQLite (in memory via Type ORM), and PostgreSQL, highlighting my ability to integrate these technologies in a cohesive web application.
+This project is a demonstration of my skills in TypeScript, SQLite (in memory via Type ORM), and PostgreSQL, highlighting my ability to integrate these technologies in a cohesive web application. For now authorization code is commented out for simplicity so headers can be ignored.
 
 ## Important Note on `.env` File
 For ease of setup, a `.env` file is included in the documentation. However, I know that including `.env` files in repositories is generally not recommended for security reasons. To mitigate this, the `.env` file is also added to `.gitignore`.
