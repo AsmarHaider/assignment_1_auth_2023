@@ -39,3 +39,56 @@ To run the project, configure the `.env` file with the appropriate settings:
 - **PostgreSQL**: If using PostgreSQL (`DATABASE_TYPE=postgres`), additional parameters like `PG_DB_HOST`, `PG_DB_PORT`, `PG_DB_USER_NAME`, `PG_DB_PASSWORD`, and `PG_DB_NAME` must be correctly set.
 
 Ensure these settings are correctly configured in the `.env` file before running the project.
+
+
+# API Documentation
+
+## GET /auth/roles - Fetch All Roles
+===================================
+
+### Overview
+------------
+This endpoint retrieves a list of all roles within the system, 
+including their unique IDs, names, and associated permissions.
+
+### Request
+-----------
+**URL**: /auth/roles
+**Method**: GET
+
+**Headers**:
+  - `Authorization`: Bearer token for authenticating the request.
+    Format: `Bearer [your_token]`
+  - `X-API-Token`: Specific API token for additional security.
+
+### Response
+------------
+**Status Code**:
+  - `200 OK` on successful retrieval.
+
+**Content-Type**:
+  - `application/json`
+
+**Body**:
+  - An array of roles, each containing an ID, a name, and a list of permissions.
+
+### Example Response
+-------------------
+```json
+[
+    {
+        "id": "9faaf9ba-464e-4c68-a901-630fc4de123b",
+        "name": "User",
+        "permissions": []
+    },
+    {
+        "id": "346a3cce-49d4-4e3c-bade-a16ed44b98bb",
+        "name": "Administrator",
+        "permissions": []
+    },
+    ...
+]
+
+
+
+
