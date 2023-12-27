@@ -69,7 +69,8 @@ Body: Array of roles (ID, name, permissions).
 
 Example Response:
 -----------------
-```{
+```
+{
     "id": "9faaf9ba-464e-4c68-a901-630fc4de123b",
     "name": "User",
     "permissions": []
@@ -88,7 +89,8 @@ Body: JSON object with 'error' message and 'code'.
 
 Example Error Response:
 -----------------------
-```{
+```
+{
     "error": "Error message here",
     "code": "Error code here"
 }
@@ -126,7 +128,8 @@ This endpoint retrieves a list of all permissions, including their IDs, names, e
 
 ### Example Response
 -------------------
-```[
+```
+[
     {
         "id": "0d6179fc-bc2f-4a50-bfd8-4ce4d10680f4",
         "name": "Permission 1",
@@ -146,7 +149,8 @@ Body: JSON object with 'error' message and 'code'.
 
 Example Error Response:
 -----------------------
-```{
+```
+{
     "error": "Error message here",
     "code": "Error code here"
 }
@@ -175,7 +179,8 @@ This endpoint replaces all existing permissions of a specified role with the new
 A JSON object containing the `roleId` and a new array of permissions. This operation will replace all existing permissions of the role with those specified in the array.
 
 **Example Request Body**:
- ```{
+ ```
+{
     "roleId": "6f25f789-72f3-41e2-9561-b30ca19aa225",
     "permissions": [
         {
@@ -214,7 +219,8 @@ Body: Updated role object with new permissions.
 
 Example Response:
 -----------------
-```{
+```
+{
     "roleId": "6f25f789-72f3-41e2-9561-b30ca19aa225",
     "permissions": [
         ... (updated permissions)
@@ -233,7 +239,8 @@ Body: JSON object with 'error' message and 'code'.
 Example Error Responses:
 ------------------------
 Role Not Found:
-```{
+```
+{
     "error": "Role not found",
     "code": "ROLE_NOT_FOUND"
 }
