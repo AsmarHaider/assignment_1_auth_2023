@@ -11,16 +11,18 @@ The `.env` file is structured as follows, and you may copy it or set the environ
 ### General Configuration
 - `PORT=3000`  
   **Description**: Specifies the port number on which the web server will listen for incoming connections.
-
-### SQLite Configuration
-- `DATABASE_TYPE=sqlite_mem`  
-  **Description**: Indicates the use of an in-memory SQLite database.
 - `AUTO_CREATE_TABLES=true`  
   **Description**: When true, the application will automatically create database tables if they don't exist.
 - `AUTO_FILL_DATA=true`  
   **Description**: When true, the application will auto-populate the database with data, useful for testing or initial setup.
 
+### SQLite Configuration
+- `DATABASE_TYPE=sqlite_mem`  
+  **Description**: Indicates the use of an in-memory SQLite database.
+
 ### PostgreSQL Configuration
+- `DATABASE_TYPE=postgres`  
+  **Description**: Indicates the use of an PostgreSQL database.
 - `PG_DB_HOST=localhost`  
   **Description**: Hostname or IP address of the PostgreSQL server. 'localhost' indicates the server is running on the same machine.
 - `PG_DB_PORT=5432`  
