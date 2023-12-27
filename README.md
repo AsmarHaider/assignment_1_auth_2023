@@ -11,17 +11,17 @@ The .env file is structured as follows: you can copy it or set the env variables
 
 PORT=3000                   #### Specifies the port number on which the web server will listen for incoming connections.
 
-### SQLite Configuration
-DATABASE_TYPE=sqlite_mem     #### Indicates the type of database being used. Here, 'sqlite_mem' suggests an in-memory SQLite database.
-AUTO_CREATE_TABLES=true      #### This flag, when set to true, indicates that the application should automatically create database tables if they don't exist.
-AUTO_FILL_DATA=true          #### When set to true, this suggests that the application should auto-populate the database with data, useful for testing or initial setup.
+#SQLite Configuration
+DATABASE_TYPE=sqlite_mem      #Indicates the type of database being used. Here, 'sqlite_mem' suggests an in-memory SQLite database.
+AUTO_CREATE_TABLES=true       #This flag, when set to true, indicates that the application should automatically create database tables if they don't exist.
+AUTO_FILL_DATA=true           #When set to true, this suggests that the application should auto-populate the database with data, useful for testing or initial setup.
 
-### PostgreSQL Configuration
-PG_DB_HOST=localhost         #### The hostname or IP address of the PostgreSQL server. 'localhost' means the server is running on the same machine.
-PG_DB_PORT=5432              #### The port number on which the PostgreSQL server is listening. 5432 is the default port for PostgreSQL.
-PG_DB_USER_NAME=postgres     #### Username for connecting to the PostgreSQL database. 'postgres' is often used as the default superuser account.
-PG_DB_PASSWORD=abc123        #### Password for the PostgreSQL user specified above.
-PG_DB_NAME=postgres          #### Name of the PostgreSQL database to which the application will connect.
+#PostgreSQL Configuration
+PG_DB_HOST=localhost         #The hostname or IP address of the PostgreSQL server. 'localhost' means the server is running on the same machine.
+PG_DB_PORT=5432              #The port number on which the PostgreSQL server is listening. 5432 is the default port for PostgreSQL.
+PG_DB_USER_NAME=postgres     #Username for connecting to the PostgreSQL database. 'postgres' is often used as the default superuser account.
+PG_DB_PASSWORD=abc123        #Password for the PostgreSQL user specified above.
+PG_DB_NAME=postgres          #Name of the PostgreSQL database to which the application will connect.
 
 
 ## Running the Project
