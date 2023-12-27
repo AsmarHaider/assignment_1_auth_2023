@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true, // Enable ES modules interop
+    "skipLibCheck": true,  // Skip type checking of declaration files, avoid checking third party dec
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["src/**/*"], // Include all files in src folder
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist
+}
