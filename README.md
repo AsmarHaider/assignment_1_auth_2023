@@ -72,6 +72,7 @@ Body: Array of roles (ID, name, permissions).
 Example Response:
 -----------------
 ```
+[
 {
     "id": "9faaf9ba-464e-4c68-a901-630fc4de123b",
     "name": "User",
@@ -82,6 +83,7 @@ Example Response:
     "name": "Administrator",
     "permissions": []
 },
+]
 ```
 Error Response
 --------------
